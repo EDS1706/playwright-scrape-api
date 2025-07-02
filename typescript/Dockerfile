@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/playwright:v1.34.0-jammy
 WORKDIR /usr/src/app
 
 # Copy over assets
-COPY package.json ./
-COPY yarn.lock ./
+COPY typescript/package.json ./
+COPY typescript/yarn.lock ./
 
 # Install dependencies.
 RUN yarn install --immutable --immutable-cache --check-cache
